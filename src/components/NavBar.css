@@ -1,0 +1,20 @@
+#navTitle {
+    color: floralwhite;
+}   
+
+ul li {
+    display: inline;
+    color: floralwhite;
+}
+
+#Nav {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#logo {
+    color: floralwhite;
+    max-width: 50px;
+    max-height: 50px;
+    padding-right: 20px;
+}
