@@ -1,38 +1,45 @@
 import React from 'react'
 import './NavBar.css'
 import logo from '../assets/img/logo.png'
+import Navbar from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav'
+import { Container } from 'react-bootstrap'
+import CartWidget from './CartWidget'
+import ItemListContainer from './ItemListContainer'
 
 
 function navBar() {
     return (
         <>
-            <div>
-                <nav className="navbar navbar-expand-lg navbar-dark bg-dark" id="Nav">
-                <img src={logo} alt="logo" id="logo"/>
-                    <a className="navbar-brand" href="/#" id="navTitle">Find My Food</a>
-                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse offset-1" id="navbarNav">
-                        <ul className="navbar-nav">
-                        <li className="nav-item active">
-                            <a className="nav-link" href="/#">Home</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/#">Menu</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/#">About us</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/#">Contact</a>
-                        </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
+            <Navbar className='bg-dark' expand="lg" variant="dark">
+                <Container>
+                    <Navbar.Brand>
+                    <img
+                        src={logo}
+                        width="30"
+                        height="30"
+                        className="d-inline-block align-top"
+                        alt="FMF logo"
+                    />
+                    </Navbar.Brand>
+                    <Navbar.Brand className="text-white">Find My Food</Navbar.Brand>
+                    {' '}, {' '}
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                        <Navbar.Collapse id="basic-navbar-nav">
+                            <Nav className="me-auto">
+                                <Nav.Link href="#home">Home</Nav.Link>
+                                <Nav.Link href="#Menu">Menu</Nav.Link>
+                                <Nav.Link href="#About">About</Nav.Link>
+                                <Nav.Link href="#">Contact us</Nav.Link>
+                            </Nav>
+                            <CartWidget />
+                        </Navbar.Collapse>
+                </Container>
+            </Navbar>
+
+            <ItemListContainer />
         </>
-    )
+    );
 }
 
-export default navBar
+export default navBar;
