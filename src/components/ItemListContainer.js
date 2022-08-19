@@ -1,10 +1,15 @@
 import React from 'react'
 import './ItemListContainer.css'
+import ItemCount from './ItemCount'
+
 
 function ItemListContainer() {
     return (
-
-        <div className="textExample">Texto de ejemplo</div>
+        <>
+            <div className="textExample">
+                <ItemCount stock={5} initial={1}/>
+            </div>
+        </>
     )
 }
 

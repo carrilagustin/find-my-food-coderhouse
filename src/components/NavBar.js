@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import { Container } from 'react-bootstrap'
 import CartWidget from './CartWidget'
-import ItemListContainer from './ItemListContainer'
+
 
 
 function navBar() {
@@ -36,8 +36,6 @@ function navBar() {
                         </Navbar.Collapse>
                 </Container>
             </Navbar>
-
-            <ItemListContainer />
         </>
     );
 }
