@@ -2,12 +2,15 @@ import React, { useState } from 'react'
 import { Button, ButtonGroup } from 'react-bootstrap'
 
 
+
 function ItemCount(props) {
-    
-    const [count, setCount] = useState(+(props.initial));
+
+    const {initial, stock} = props;
+
+    const [count, setCount] = useState(+(initial));
 
     const decrease = () => {
-        if (count <= props.initial) {
+        if (count <= initial) {
             return;
         } else {
             setCount(count - 1)
@@ -15,7 +18,7 @@ function ItemCount(props) {
     }
 
     const increase = () => {
-        if (count >= props.stock) {
+        if (count >= stock) {
             return;
         } else {
             setCount(count + 1);
