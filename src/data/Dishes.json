@@ -1,0 +1,21 @@
+    {
+        "dish": [
+            {
+                "id": 1,
+                "name": "Hamburguer TNT",
+                "price": "$250",
+                "ingredients": ["Bun ", "Meat ", "Abanero ", "Cheddar"],
+                "rating": "5 stars",
+                "url": "https://betterbegrilled.com/wp-content/uploads/2019/03/20190322_210110-2-1-520x520.jpg"
+                
+            },
+            {
+                "id": 2,
+                "name": "Hamburguer Vegan",
+                "price": "$200",
+                "ingredients": ["Bun ", "Vegan meat ", "Avocado ", "Sriracha"],
+                "rating": "5 stars",
+                "url": "https://www.sainsburysmagazine.co.uk/uploads/media/2400x1800/09/9289-Vegan-burger.jpg?v=1-0"
+            }
+        ]
+    }
