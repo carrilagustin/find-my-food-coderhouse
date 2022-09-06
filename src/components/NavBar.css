@@ -18,3 +18,15 @@ ul li {
     max-height: 50px;
     padding-right: 20px;
 }
+
+.classActive {
+    color: floralwhite;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.classInactive {
+    color: grey;
+    text-decoration: none;
+    padding: 10px;
+}

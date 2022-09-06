@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import { Container } from 'react-bootstrap'
 import CartWidget from './CartWidget'
-
+import { Link, NavLink } from 'react-router-dom';
 
 
 function navBar() {
@@ -22,15 +22,18 @@ function navBar() {
                         alt="FMF logo"
                     />
                     </Navbar.Brand>
-                    <Navbar.Brand className="text-white">Find My Food</Navbar.Brand>
+                    <Link style={{textDecoration: 'inherit', padding: '5px'}} to='/home'>
+                        <Navbar.Brand className="text-white">Find My Food</Navbar.Brand>
+                    </Link>
                     {' '}, {' '}
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="me-auto">
-                                <Nav.Link href="#home">Home</Nav.Link>
-                                <Nav.Link href="#Menu">Menu</Nav.Link>
-                                <Nav.Link href="#About">About</Nav.Link>
-                                <Nav.Link href="#">Contact us</Nav.Link>
+                                <NavLink className={({isActive}) => isActive ? "classActive" : "classInactive"} to="/home">Home </NavLink>
+                                <NavLink className={({isActive}) => isActive ? "classActive" : "classInactive"} to="/category/meat">Meat </NavLink>
+                                <NavLink className={({isActive}) => isActive ? "classActive" : "classInactive"} to="/category/vegan">Vegan </NavLink>
+                                <NavLink className={({isActive}) => isActive ? "classActive" : "classInactive"} to="/">About </NavLink>
+                                <NavLink className={({isActive}) => isActive ? "classActive" : "classInactive"} to="/">Contact us</NavLink>
                             </Nav>
                             <CartWidget />
                         </Navbar.Collapse>

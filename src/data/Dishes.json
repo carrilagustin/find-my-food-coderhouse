@@ -2,20 +2,57 @@
         "dish": [
             {
                 "id": 1,
-                "name": "Hamburguer TNT",
+                "name": "TNT Burger",
                 "price": "$250",
-                "ingredients": ["Bun ", "Meat ", "Abanero ", "Cheddar"],
+                "ingredients": [["Bun"], ["Meat"], ["Abanero"], ["Cheddar"]],
                 "rating": "5 stars",
-                "url": "https://betterbegrilled.com/wp-content/uploads/2019/03/20190322_210110-2-1-520x520.jpg"
-                
+                "url": "https://betterbegrilled.com/wp-content/uploads/2019/03/20190322_210110-2-1-520x520.jpg",
+                "category": "meat"
             },
             {
                 "id": 2,
-                "name": "Hamburguer Vegan",
+                "name": "Vegan Burger",
                 "price": "$200",
-                "ingredients": ["Bun ", "Vegan meat ", "Avocado ", "Sriracha"],
+                "ingredients": [["Bun"], ["Vegan meat"], ["Avocado"], ["Sriracha"]],
                 "rating": "5 stars",
-                "url": "https://www.sainsburysmagazine.co.uk/uploads/media/2400x1800/09/9289-Vegan-burger.jpg?v=1-0"
+                "url": "https://www.sainsburysmagazine.co.uk/uploads/media/2400x1800/09/9289-Vegan-burger.jpg?v=1-0",
+                "category": "vegan"
+            },
+            {
+                "id": 3,
+                "name": "Eggplant Burger",
+                "price": "$300",
+                "ingredients": [["Bun"], ["Eggplant"], ["Lettuce"], ["Tomatoe"]],
+                "rating": "5 stars",
+                "url": "https://www.tasteofhome.com/wp-content/uploads/2018/01/Tuna-Burgers_EXPS_SDFM17_925_C10_06_2b-5.jpg?fit=700,1024",
+                "category": "vegan"
+            },
+            {
+                "id": 4,
+                "name": "Chicken Burger",
+                "price": "$200",
+                "ingredients": [["Bun"], ["Chicken"], ["Mayo"], ["Lettuce"]],
+                "rating": "5 stars",
+                "url": "https://eightforestlane.com/wp-content/uploads/2022/01/Crispy-Chicken-Burger_SQ-1.jpg",
+                "category": "meat"
+            },
+            {
+                "id": 5,
+                "name": "Smash Burger",
+                "price": "$200",
+                "ingredients": [["Bun"], ["2x Meat"], ["Cheddar"], ["Pickles"], ["Lettuce"]],
+                "rating": "5 stars",
+                "url": "https://tmbidigitalassetsazure.blob.core.windows.net/rms3-prod/attachments/37/1200x1200/Smash-Burgers_EXPS_TOHcom20_246232_B10_06_10b.jpg",
+                "category": "meat"
+            },
+            {
+                "id": 6,
+                "name": "Imposible Burger",
+                "price": "$500",
+                "ingredients": [["Bun"], ["3x Meat"], ["Cheddar"], ["BBQ Sauce"]],
+                "rating": "5 stars",
+                "url": "https://i.pinimg.com/originals/d3/8b/07/d38b07128785f01e16bb1ea49f3b18ed.jpg",
+                "category": "meat"
             }
         ]
     }

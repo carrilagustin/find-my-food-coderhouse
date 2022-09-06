@@ -1,16 +1,12 @@
 import React from 'react'
-import Item from './Item';
 import ItemDetail from './ItemDetail'
-import { useEffect, useState } from 'react'
-import Dishes from '../data/Dishes.json'
 
 
 function ItemDetailContainer() {
 
-
     return (
         <>
-            <div className="tarjeta">
+            <div className="offset-3 col-6">
                 <ItemDetail/>
             </div>
         </>

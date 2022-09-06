@@ -4,60 +4,48 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import Cards from './Cards'
 import { Row, Col } from 'react-bootstrap'
+import { useParams } from 'react-router-dom'
 
-function ItemList() {
+
+const ItemList = () => {
+
+    const { dishType } = useParams();
     
-    const dishes = [
-        {
-            "id": 1,
-            "name": "Hamburger TNT",
-            "price": "$250",
-            "img": "https://betterbegrilled.com/wp-content/uploads/2019/03/20190322_210110-2-1-520x520.jpg",
-            "ingredients": ["Bun", "Meat", "Abanero", "Cheddar"],
-            "rating": "5 stars"
-        },
-        {
-            "id": 2,
-            "name": "Vegan Burger",
-            "price": "$300",
-            "img": "https://www.sainsburysmagazine.co.uk/uploads/media/2400x1800/09/9289-Vegan-burger.jpg?v=1-0",
-            "ingredients": ["Bun", "Beyond Meat", "Avocado", "Onion"],
-            "rating": "5 stars"
-        }
-    ];
-
     const [dish, setDish] = useState([]);
 
-    const delay = () => {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(dishes);
-            }, 2000);
-        });
-    }
-    
-    useEffect(() => {
-        
-        const resultadoDelay = async() => {
-            try {
-                const cardDishes = await delay();
-                setDish(cardDishes);
-            } catch (error) {
-                console.log("Error!")
-            }
+    const URL = "http://localhost:8000/dish"
+
+    const showData = async () => {
+        const response = await fetch(URL);
+        const data = await response.json();
+        if(dishType === undefined){
+            setDish(data);
+        } else {
+            const nuevaLista = data.filter(dish => dish.category === dishType)
+            
+            setDish(nuevaLista);
+
+            console.log('nueva lista',nuevaLista);
         }
-        resultadoDelay();
-    }, []) // eslint-disable-line react-hooks/exhaustive-deps
+    }
+
+    useEffect(() => {
+        setTimeout(() => {
+            
+            showData();
+        }, 1000)
+    }, [dishType])
     
+
     return (
         <>
             <div className="show">
                 <Row>
-                    {dish.map((dish) => {
+                    {dish.map((dish, i) => {
                         return (
                             <Col>
-                                <div>
-                                    <Cards key={dish.id} name={dish.name} price={dish.price} img={dish.img}/>
+                                <div key={i}>
+                                    <Cards key={dish.id} name={dish.name} price={dish.price} img={dish.url}/>
                                 </div>
                             </Col>
                         )
