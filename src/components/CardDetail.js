@@ -24,12 +24,18 @@ const CardDetail = (dish) => {
                     <div className="textDetail">
                         <h4>{name}</h4>
                         <br/>
-                        <h5>Ingredients:</h5>
-                        <p>{ingredients[0]}</p>
-                        <p>{ingredients[1]}</p>
-                        <p>{ingredients[2]}</p>
-                        <p>{ingredients[3]}</p>
-                        <p>{ingredients[4]}</p>
+                        {
+                            ingredients && ingredients.length > 0 && (
+                                <>
+                                    <h5>Ingredients:</h5>
+                                    <p>{ingredients[0]}</p>
+                                    <p>{ingredients[1]}</p>
+                                    <p>{ingredients[2]}</p>
+                                    <p>{ingredients[3]}</p>
+                                    <p>{ingredients[4]}</p>
+                                </>
+                            )
+                        }
                         <br/>
                         <h4>{price}</h4>
                     </div>

@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 const Cards = (dish) => {
 
     const { id, name, img, price, ingredients } = dish;
-
+    console.log(dish);
 
     return (
         <>

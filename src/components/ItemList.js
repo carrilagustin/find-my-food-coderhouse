@@ -43,9 +43,9 @@ const ItemList = () => {
                 <Row>
                     {dish.map((dish, i) => {
                         return (
-                            <Col>
+                            <Col key={dish.id}>
                                 <div key={i}>
-                                    <Cards key={dish.id} name={dish.name} price={dish.price} img={dish.url}/>
+                                    <Cards id={dish.id} name={dish.name} price={dish.price} img={dish.url}/>
                                 </div>
                             </Col>
                         )

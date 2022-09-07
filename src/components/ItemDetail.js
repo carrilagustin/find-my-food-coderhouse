@@ -18,11 +18,11 @@ const ItemDetail = () => {
         const response = await fetch(URL);
         const data = await response.json();
             
-            const nuevaLista = data.find(dish => dish.id === parseInt(dishId))
+            const nuevoObjeto = data.find(dish => dish.id === parseInt(dishId))
             
-            setDish(nuevaLista);
+            setDish(nuevoObjeto);
             
-            console.log('nueva lista', nuevaLista);
+            console.log('nueva objeto', nuevoObjeto);
         
     }
     useEffect(() => {
@@ -34,22 +34,19 @@ const ItemDetail = () => {
     }, [dishId])
     
 
-    console.log(dishId);
+    console.log(dish);
     
     return (
         <>
             <div className="show">
                 <Row>
-                {Array.isArray(dish)
-                    ? dish.map((dish, i) => {
-                        return (
-                            <Col>
-                                <div>
-                                    <CardDetail key={dish.id} name={dish.name} price={dish.price} img={dish.url} ingredients={dish.ingredients}/>
-                                </div>
-                            </Col>
-                        )}    
-                    ) : null }
+        
+                    <Col>
+                        <div>
+                            <CardDetail key={dish.id} name={dish.name} price={dish.price} img={dish.url} ingredients={dish.ingredients}/>
+                        </div>
+                    </Col>
+        
                 </Row>
             </div>
         </>
