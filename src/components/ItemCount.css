@@ -1,0 +1,45 @@
+.countButton {
+    background-color: rgb(51, 51, 51);
+    border-radius: 50%;
+    border: 1px solid;
+    border-color: rgb(51, 51, 51);
+    color: floralwhite;
+    
+}
+
+.groupButton{
+    margin: 20px;
+}
+
+.countButton:hover {
+    background-color: darkgrey;
+    border-color: darkgrey;
+}
+
+.countButton:focus {
+    background-color: darkgrey;
+    border-color: darkgrey;
+}
+
+.count {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 0;
+}
+
+.addButton {
+    background-color: rgb(51, 51, 51);
+    border: 1px solid;
+    border-color: rgb(51, 51, 51);
+    color: floralwhite;
+}
+
+.addButton:hover {
+    background-color: darkgrey;
+    border-color: darkgrey;
+}
+
+.addButton:focus {
+    background-color: darkgrey;
+    border-color: darkgrey;
+}

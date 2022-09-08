@@ -4,6 +4,7 @@ import { Row, Col } from 'react-bootstrap'
 import { useEffect, useState } from 'react'
 import './ItemDetail.css'
 import { useParams } from 'react-router-dom'
+import { ItemCount } from './ItemCount'
 
 
 const ItemDetail = () => {
@@ -33,20 +34,24 @@ const ItemDetail = () => {
         }, 1000)
     }, [dishId])
     
-
-    console.log(dish);
     
+
+    const countAdd = (count) => {
+        console.log("Has agregago " + count + " articulos")
+        
+    }
+
+
     return (
         <>
             <div className="show">
                 <Row>
-        
                     <Col>
                         <div>
                             <CardDetail key={dish.id} name={dish.name} price={dish.price} img={dish.url} ingredients={dish.ingredients}/>
+                            <ItemCount stock={5} initial={1} countAdd={countAdd}/>
                         </div>
                     </Col>
-        
                 </Row>
             </div>
         </>

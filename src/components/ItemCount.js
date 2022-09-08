@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { Button, ButtonGroup } from 'react-bootstrap'
+import './ItemCount.css'
 
 
+export const ItemCount = (props) => {
 
-function ItemCount(props) {
-
-    const {initial, stock} = props;
+    const {initial, stock, countAdd} = props;
 
     const [count, setCount] = useState(+(initial));
 
@@ -25,26 +25,17 @@ function ItemCount(props) {
         }
     }
 
-    const onAdd = () => {
-        console.log("Has agregago " + count + " articulos")
-    }
-    
-    
     return (
         <>
         <div>
-            <h2>{count}</h2>
-                <ButtonGroup className="mb-2">
-                    <Button variant="success" size="lg" onClick={decrease}>-</Button>
+                <ButtonGroup className="mb-2 groupButton">
+                    <Button className="countButton" size="sm" onClick={decrease}>-</Button>
+                        <h2 className="count">{count}</h2>    
+                    <Button className="countButton" size="sm" onClick={increase}>+</Button>
                 </ButtonGroup>
-                {' '}
-                <ButtonGroup className="mb-2">
-                    <Button variant="success" size="lg" onClick={increase}>+</Button>
-                </ButtonGroup>
-                {' '}
         </div>
         <div>
-            <Button variant="primary" size="lg" onClick={onAdd}>Agregar</Button>
+            <Button className="addButton" size="lg" onClick={()=> countAdd(count)}>Agregar</Button>
         </div>
         </>        
     )
